@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<!-- <h1 class="title">Welcome, {{ name }}!!!</h1> -->
+<div class="columns">
+  <div class="column is-half">
+    <div class="box">
+      <p class="title is-5">Cobra Pose</p>
+      <img
+        src="{{url_for('static', filename='images/mountain-pose.jpeg')}}"
+        alt=""
+      />
+      <p class="has-text-grey is-size-6">
+        The foundation of all standing poses, Mountain Pose makes a great a
+        starting position, resting pose, or tool to improve posture.
+      </p>
+    </div>
+  </div>
+  <div class="column is-half">
+    <div class="box">
+      <img src="{{url_for('main.live',pose_name='mountain')}}" alt="" />
+    </div>
+  <a class="button is-danger" href="{{url_for('main.profile')}}">Home</a>
+  </div>
+</div>
+
+{% endblock %}

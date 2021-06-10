@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+<!-- <h1 class="title">Welcome, {{ name }}!!!</h1> -->
+<div class="columns">
+  <div class="column is-half">
+    <div class="box">
+      <p class="title is-5">Cobra Pose</p>
+      <img
+        src="{{url_for('static', filename='images/cobra-pose.jpeg')}}"
+        alt=""
+      />
+      <p class="has-text-grey is-size-6">
+        By providing a conscious opening in the chest and stretch in the
+        shoulders, Cobra Pose, called Bhujangasana in Sanskrit, fights fatigue
+        and relieves lower back pain, boosting both the energetic and the
+        physical body.
+      </p>
+      <br>
+      <a href="{{url_for('main.pose',pose_name='cobra')}}" class="button is-danger">Try it</a>
+    </div>
+  </div>
+  <div class="column is-half">
+    <div class="box">
+      <p class="title is-5">Mountain Pose</p>
+      <img
+        src="{{url_for('static', filename='images/mountain-pose.jpeg')}}"
+        alt=""
+      />
+      <p class="has-text-grey is-size-6">
+        The foundation of all standing poses, Mountain Pose makes a great a
+        starting position, resting pose, or tool to improve posture.
+      </p>
+      <br>
+      <a href="{{url_for('main.pose',pose_name='mountain')}}" class="button is-danger">Try it</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

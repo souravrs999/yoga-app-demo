@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block content %}
+<!-- <h1 class="title">Welcome, {{ name }}!!!</h1> -->
+<div class="columns">
+  <div class="column is-half">
+    <div class="box">
+      <p class="title is-5">Cobra Pose</p>
+      <img
+        src="{{url_for('static', filename='images/cobra-pose.jpeg')}}"
+        alt=""
+      />
+      <p class="has-text-grey is-size-6">
+        By providing a conscious opening in the chest and stretch in the
+        shoulders, Cobra Pose, called Bhujangasana in Sanskrit, fights fatigue
+        and relieves lower back pain, boosting both the energetic and the
+        physical body.
+      </p>
+    </div>
+  </div>
+  <div class="column is-half">
+    <div class="box">
+      <img src="{{url_for('main.live',pose_name='cobra')}}" alt="" />
+    </div>
+    <a class="button is-danger" href="{{url_for('main.profile')}}">Home</a>
+  </div>
+</div>
+
+{% endblock %}
